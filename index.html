@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galerie de photos interactive et accessible</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body onload="addTabIndex()">
+  <header>
+    <h1>Galerie de photos interactive</h1>
+    <p>Survolez une image avec la souris, ou naviguez avec la touche Tab, pour l’afficher en grand.</p>
+  </header>
+
+  <main>
+    <h2>Aperçu</h2>
+    <div id="image" aria-live="polite">Survolez ou sélectionnez une image ci-dessous pour l’afficher ici.</div>
+
+    <h2>Les images</h2>
+    <div class="gallery">
+      <figure>
+        <img onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()"
+             src="images/dunes.svg" alt="Dunes de sable orangées au coucher du soleil sous un ciel doré">
+        <figcaption>Dunes au coucher du soleil</figcaption>
+      </figure>
+      <figure>
+        <img onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()"
+             src="images/atlas.svg" alt="Montagnes de l’Atlas aux sommets enneigés dominant une vallée verte">
+        <figcaption>Montagnes de l’Atlas</figcaption>
+      </figure>
+      <figure>
+        <img onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()"
+             src="images/mer.svg" alt="Mer bleue avec un petit voilier à voile blanche et un soleil pâle">
+        <figcaption>Bord de mer</figcaption>
+      </figure>
+      <figure>
+        <img onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()"
+             src="images/medina.svg" alt="Grande porte en arc de style marocain dans un mur rouge de la médina">
+        <figcaption>Porte de la médina</figcaption>
+      </figure>
+      <figure>
+        <img onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()"
+             src="images/oasis.svg" alt="Oasis avec deux palmiers au bord d’un petit étang dans le désert">
+        <figcaption>Oasis et palmiers</figcaption>
+      </figure>
+      <figure>
+        <img onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()"
+             src="images/nuit.svg" alt="Ciel nocturne étoilé avec un croissant de lune au-dessus de collines sombres">
+        <figcaption>Nuit étoilée</figcaption>
+      </figure>
+    </div>
+  </main>
+</body>
+</html>
